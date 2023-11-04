@@ -1,0 +1,111 @@
+﻿<Window x:Class="dataBase2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dataBase2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="597" Width="440">
+    <Grid Margin="0,0,0,2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="390*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="146*"/>
+            <RowDefinition Height="43*"/>
+
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Column="1" Margin="0,21,0,0" x:Name="comboBox" SelectionChanged="comboBox_SelectionChanged" Height="30" VerticalAlignment="Top"/>
+            <Label Content="Фамилия:" Grid.Column ="0" Margin="66,21,5,-21"/>
+        </Grid>
+        <ListBox Margin="0,63,0,0" x:Name="listBox">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Январь:"/>
+                <Label Content="" x:Name="JanuaryLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Ферваль:"/>
+                <Label Content="" x:Name="FebruaryLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Март:"/>
+                <Label Content="" x:Name="MarchLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Апрель:"/>
+                <Label Content="" x:Name="AprilLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Май:"/>
+                <Label Content="" x:Name="MayLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Июнь:"/>
+                <Label Content="" x:Name="JuneLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Июль:"/>
+                <Label Content="" x:Name="JulyLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Август:"/>
+                <Label Content="" x:Name="AugustLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Сентябрь:"/>
+                <Label Content="" x:Name="SeptemberLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Октябрь:"/>
+                <Label Content="" x:Name="OctoberLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Ноябрь:"/>
+                <Label Content="" x:Name="NovemberLabel"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Декабрь:"/>
+                <Label Content="" x:Name="DecemberLabel"/>
+            </StackPanel>
+        </ListBox>
+        <Grid Height="145" VerticalAlignment="Center" Grid.Row="2">
+            <Label Content="Фамилия" Margin="0,0,372,117"/>
+            <TextBox Margin="56,4,288,119" x:Name="textBoxSurName"/>
+            <Label Content="Январь" Margin="0,24,384,95"/>
+            <TextBox Margin="56,30,288,95" x:Name="textBoxJanuary"/>
+            <Label Content="Ферваль" Margin="-2,50,384,69"/>
+            <TextBox Margin="56,55,288,70" x:Name="textBoxFebruary"/>
+            <Label Content="Март" Margin="3,73,389,44"/>
+            <TextBox Margin="56,81,288,44" x:Name="textBoxMarch" />
+            <Label Content="Август" Margin="150,73,238,42"/>
+            <TextBox Margin="207,77,139,46" x:Name="textBoxAugust"/>
+            <Label Content="Июль" Margin="150,49,228,70"/>
+            <TextBox Margin="207,54,139,73" x:Name="textBoxJuly"/>
+            <Label Content="Июнь" Margin="150,25,220,95"/>
+            <TextBox Margin="207,30,139,95" x:Name="textBoxJune" />
+            <Label Content="Май" Margin="150,1,238,117"/>
+            <TextBox Margin="207,6,139,119" x:Name="textBoxMay"/>
+            <Label Content="Октябрь" Margin="298,1,68,117"/>
+            <TextBox Margin="360,6,0,119" x:Name="textBoxOctober"/>
+            <Label Content="Апрель" Margin="3,97,384,24"/>
+            <TextBox Margin="56,105,288,20" x:Name="textBoxApril"/>
+            <Label Content="Сентябрь" Margin="150,99,220,16"/>
+            <TextBox Margin="207,104,139,20" x:Name="textBoxSeptember"/>
+            <Label Content="Ноябрь" Margin="298,28,68,90"/>
+            <TextBox Margin="360,33,0,92" x:Name="textBoxNovember" />
+            <Label Content="Декабрь" Margin="298,50,68,68"/>
+            <TextBox Margin="360,55,0,70" x:Name="textBoxDecember" />
+
+        </Grid>
+        <Grid Grid.Row="2" Margin="0,146,284,10" Grid.RowSpan="2">
+            <Button Margin="0,10,12,-9" Content="Добавить" x:Name="AddButton" Click="AddButton_Click"/>
+            <Button Margin="296,10,-285,-9" Content="Удалить" x:Name="RedButton" Click="DelButton_Click"/>
+            <Button Margin="147,10,-136,-9" Content="Изминенить" x:Name="DelButton" Click="RedButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
